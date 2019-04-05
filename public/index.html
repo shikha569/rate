@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+        <title>Professor's Hub :: Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:500,700,800" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+        <script>
+          $(document).ready(function () {
+            $(function () {
+              $('.textslider .slides:gt(0)').hide();
+              setInterval(function () {
+                $('.textslider :first-child').fadeOut(1).next('.slides').fadeIn(1)
+                  .end().appendTo('.textslider');
+              }, 5000);
+            });
+          });
+
+          $(document).ready(function () {
+              $(".left-first-section").click(function () {
+                $('.main-section').toggleClass("open-more");
+              });
+            });
+            $(document).ready(function () {
+              $(".fa-clone").click(function () {
+                $('.main-section').toggleClass("open-more");
+              });
+            });
+
+            // rate
+
+               var practicalArray = ["Low", "Intermediate", "High", "Excellent"];
+                var wayOfArray = ["Not Effective", "Partially Effective", "Effective", "Highly Effective"];
+                var behaviourArray = ["Impotent", "Strict", "Polite", "Interactive"];
+                var regularityArray = ["Inconsistent", "Somewhat Inconsistent", "Moderately Consistent", "Consistent"];
+                var theoraticalArray = ["Low", "Intermediate", "High", "Excellent"];
+                var punctualityArray = ["Always Late", "Mostly Late", "Sometimes Late", "Always Punctual"];
+                var recommendationArray = ["Not Recommended", "Recommended", "Highly Recommended", "Highly Recommended"];
+                var communicationArray = ["Quiet", "Impersonal", "Confident", "Professional"];
+                function showValue(input, pargraph, valueArray) {
+                  val = input.value;
+                  if (val <= 25) {
+                    pargraph.innerHTML = valueArray[0];
+                    pargraph.className = "";
+                    pargraph.classList.add("danger");
+                  }
+                  else if (val == 26 || val <= 50) {
+                    pargraph.innerHTML = valueArray[1];
+                    pargraph.className = "";
+                    pargraph.classList.add("warning");
+                  }
+                  else if (val == 51 || val <= 75) {
+                    pargraph.innerHTML = valueArray[2];
+                    pargraph.className = "";
+                    pargraph.classList.add("primary");
+                  }
+                  else {
+                    pargraph.innerHTML = valueArray[3];
+                    pargraph.className = "";
+                    pargraph.classList.add("success");
+                  }
+                }
+
+            
+        </script>
+
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>

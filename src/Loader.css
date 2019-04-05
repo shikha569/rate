@@ -1,0 +1,34 @@
+
+.overlay {
+  width:100%;
+  height:100%;
+  position:fixed;
+  z-index: 11111;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hide {
+  display:none;
+  overflow: hidden;
+}
+.loader {
+  width:0;
+  height:0;
+  border-width:5vh;
+  border-style:solid;
+  border-color:transparent #f80 transparent #f80;
+  border-radius:50%;
+  animation: rotateLoader 1s linear infinite;
+}
+@keyframes rotateLoader {
+  from {
+    transform:rotate(0deg);
+  }
+  to {
+    transform:rotate(360deg);
+  }
+}
